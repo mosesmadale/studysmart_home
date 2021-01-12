@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="saving-book.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../footer_resources/footer.css">
+    <script src="../../offline cdns/jquery.js"></script>
+    <title>Study Smart - Study less | Study Smarter</title>
+
+    <!--Add bootstrap CDN onupload-->
+
+    <link rel="stylesheet" href="../../offline cdns/bootstrap.min.css">
+
+</head>
+
+<body>
+    <script defer src="../../offline cdns/bootstrap.min.js"></script>
+
+    <!--Nav Bar Section-->
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light p-auto fixed-top w-100" style="background-color: white; box-shadow: 0px 0px 50px 1px rgba(53, 53, 53, 0.329);">
+        <a class="navbar-brand" href="index.html">
+            <div>Study <strong>Smart</strong></div>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav" style="background-color: white;">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item spread">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item spread active">
+                    <a class="nav-link" href="vision.html">Vision <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item spread">
+                    <a class="nav-link" href="about-us.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../login system/index.html" target="_blank">
+                        <button class="btn btn-outline-primary" type="button">Login</button>
+                    </a>
+                </li>
+                <li class="nav-item" style="margin-right: 5px;">
+                    <a class="nav-link" href="../../sign up system/register.html" target="_blank">
+                        <button class="btn btn-outline-warning" type="button">Register</button>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <section id="body">
+        <section class="headbg">
+            <section id="overlay"></section>
+            <section id="text-in-headbg">
+                <a href="index.html">
+                    <div class="top">Study <strong>Smart</strong></div>
+                </a>
+                <div class="bottom">Study Less | Study Smarter</div>
+            </section>
+
+            <section class="content-holder-wide">
+
+                <h1 class="display-4 body-title trick">
+                    Our Vision
+                </h1>
+
+                <div class="body-title trick">
+                    As a <b>professional studying platform</b> we want to make sure that <b>quality education</b> is populating modern students' minds.
+                    <br /> Our aim is to press hard on students <b>working together</b> to revise and learn.
+                    <br> Everyone has <b>Strengths and weaknesses</b> but together we can overcome the weaknesses and live by our Strengths.
+                    <br> <b>Study Smart, Study Together study smarter!</b>
+                </div>
+
+                <div class="footer">
+                    <section class="links-for-footer">
+                        <section class="main-page-links">
+                            <p>Main Pages</p>
+                            <a href="index.html">Home</a>
+                            <a href="vision.html">Vision</a>
+                            <a href="about-us.html">About Us</a>
+                            <a href="../../login system/index.html" target="_blank">Login</a>
+                            <a href="../../sign up system/register.html" target="_blank">Register</a>
+                        </section>
+                        <section class="about-links">
+                            <p>Contact Us</p>
+                            <a href="#">
+                                <div class="social-holder">
+                                    <img src="../footer_resources/instagram.svg" alt="" width="30px">
+                                    <div>Instagram</div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="social-holder">
+                                    <img src="../footer_resources/facebook-square.svg" alt="" width="30px">
+                                    <div>Facebook</div>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="social-holder">
+                                    <img src="../footer_resources/youtube.svg" alt="" width="30px">
+                                    <div>Youtube</div>
+                                </div>
+                            </a>
+                        </section>
+                    </section>
+                    <section class="copy-right"> Study Smart 2020 version 2.0.0</section>
+                </div>
+
+            </section>
+
+
+
+        </section>
+    </section>
+
+
+
+
+    <!--End Of nav Ber Section-->
+
+    <script>
+        (function($) {
+
+
+            $.fn.visible = function(partial) {
+
+                var $t = $(this),
+                    $w = $(window),
+                    viewTop = $w.scrollTop(),
+                    viewBottom = viewTop + $w.height(),
+                    _top = $t.offset().top,
+                    _bottom = _top + $t.height(),
+                    compareTop = partial === true ? _bottom : _top,
+                    compareBottom = partial === true ? _top : _bottom;
+
+                return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+
+            };
+
+        })(jQuery);
+
+
+        $(window).scroll(function(event) {
+
+            $(".trick").each(function(i, el) {
+                var el = $(el);
+                if (el.visible(true)) {
+                    el.addClass("come-in");
+                }
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
